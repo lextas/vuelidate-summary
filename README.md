@@ -6,7 +6,7 @@ Extract validation summary from [vuelidate](https://github.com/vuelidate/vuelida
 This plugin is far from perfect but it could be adjusted to your own needs.
 
 ### Summary
-This plugin loops through the validation object of [vuelidate](https://github.com/vuelidate/vuelidate) and creates a new array of invalid fields. This result has the following format:
+This plugin loops through the validation object of [vuelidate](https://github.com/vuelidate/vuelidate) and creates a new array of invalid fields. The result has the following format:
 
 ```
 [
@@ -75,12 +75,12 @@ Vue.use(
 export default {
   computed: {
     vuelidateSummary() {
-      return this.$vuelidateSummary(this.$v)(validationMessages);
+      return this.$vuelidateSummary(this.$v)();
     },
   },
 }
 ```
-> optionally you can pass in your custom error messages for the specific validators as a second parameter. 
+> optionally you can pass in custom validation messages for the specific validators as a second parameter. 
 
 e.g:
 ```
